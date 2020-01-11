@@ -17,8 +17,8 @@ async function main() {
   ];
 
   var operations = 'beginning' + "\n";
-  myarr.forEach(function(v) {
-    operations += v.name + "\n";
+  await myarr.forEach(async function(v) {
+    operations += await mangle_name(v.name) + "\n";
   });
   operations += 'end.' + "\n";
   console.log('operations: ', operations);
